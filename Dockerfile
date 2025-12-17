@@ -13,7 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY *.py .
-COPY pdf/ pdf/ 2>/dev/null || mkdir -p pdf
+
+# Create pdf directory (will be used at runtime for uploads)
+RUN mkdir -p pdf
 
 # Expose ports for FastAPI and Streamlit
 EXPOSE 8000 8501
