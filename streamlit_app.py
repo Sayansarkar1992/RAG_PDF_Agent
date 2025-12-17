@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://localhost:8000"
+API_URL = "http://44.203.155.223:8000"
 
 st.set_page_config(page_title="RAG PDF Agent", page_icon="📄")
 

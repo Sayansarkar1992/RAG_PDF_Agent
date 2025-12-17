@@ -5,7 +5,14 @@ import os
 app = FastAPI()
 
 UPLOAD_FOLDER = "pdf"
+
+
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+
+@app.get("/")
+async def health():
+    return {"status": "healthy"}
 
 
 @app.post("/chat")
